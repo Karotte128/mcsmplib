@@ -5,9 +5,7 @@ type Request struct {
 	Params []any
 }
 
-type RPCDiscover struct{}
-
-func (m RPCDiscover) Build() Request {
+func RPCDiscover() Request {
 	r := Request{
 		Method: "rpc.discover",
 		Params: []any{},
@@ -16,11 +14,7 @@ func (m RPCDiscover) Build() Request {
 	return r
 }
 
-type AllowlistAdd struct {
-	Player
-}
-
-func (m AllowlistAdd) Build(players []Player) Request {
+func AllowlistAdd(players []Player) Request {
 	playersParam := make([]any, len(players))
 	for i, player := range players {
 		playersParam[i] = player
