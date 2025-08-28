@@ -1,6 +1,6 @@
 package mcsmplib
 
 type Player struct {
-	Name string `json:"name"`
-	ID   string `json:"id"`
+	Name string `json:"name,omitempty"`
+	ID   string `json:"id,omitempty"`
 }
