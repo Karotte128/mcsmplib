@@ -21,7 +21,7 @@ func AllowlistAdd(players []Player) Request {
 	}
 
 	r := Request{
-		Method: "rpc.discover",
+		Method: "allowlist/add",
 		Params: []any{playersParam},
 	}
 
